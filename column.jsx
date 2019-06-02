@@ -32,7 +32,10 @@ export default class Column extends React.Component {
     return(
       <Container>
         <Title>{this.props.column.title}</Title>
-        <Droppable droppableId={this.props.column.id}>
+        <Droppable 
+          droppableId={this.props.column.id}
+          isDropDisabled={this.props.isDropDisabled}
+        >
           {provided =>(
             <TaskList
               ref={provided.innerRef}
